@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Funny cheerful theme - pinks, yellows, lollipop blues */
+        --background: 0.98 0.02 60;
+        --foreground: 0.25 0.05 280;
+        
+        --card: 1 0.01 60;
+        --card-foreground: 0.25 0.05 280;
+        
+        --popover: 1 0.01 60;
+        --popover-foreground: 0.25 0.05 280;
+        
+        --primary: 0.70 0.20 330;
+        --primary-foreground: 1 0.01 60;
+        
+        --secondary: 0.85 0.18 80;
+        --secondary-foreground: 0.30 0.05 80;
+        
+        --muted: 0.90 0.05 60;
+        --muted-foreground: 0.55 0.08 280;
+        
+        --accent: 0.75 0.15 240;
+        --accent-foreground: 1 0.01 60;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        
+        --border: 0.92 0.05 280;
+        --input: 0.92 0.05 280;
+        --ring: 0.70 0.20 330;
+        
+        /* Funny custom colors - cheerful pinks, yellows, lollipop blues */
+        --funny-primary: 0.70 0.20 330;
+        --funny-secondary: 0.85 0.18 80;
+        --funny-accent: 0.75 0.15 240;
+        --funny-muted: 0.55 0.08 280;
+    }
+
+    .dark {
+        --background: 0.20 0.05 280;
+        --foreground: 0.95 0.02 60;
+        
+        --card: 0.25 0.05 280;
+        --card-foreground: 0.95 0.02 60;
+        
+        --popover: 0.30 0.05 280;
+        --popover-foreground: 0.95 0.02 60;
+        
+        --primary: 0.75 0.18 330;
+        --primary-foreground: 0.20 0.05 280;
+        
+        --secondary: 0.80 0.15 80;
+        --secondary-foreground: 0.95 0.02 60;
+        
+        --muted: 0.35 0.08 280;
+        --muted-foreground: 0.70 0.08 280;
+        
+        --accent: 0.65 0.12 240;
+        --accent-foreground: 0.95 0.02 60;
+        
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.95 0.02 60;
+        
+        --border: 0.35 0.08 280;
+        --input: 0.35 0.08 280;
+        --ring: 0.65 0.18 330;
+        
+        /* Funny custom colors for dark mode */
+        --funny-primary: 0.75 0.18 330;
+        --funny-secondary: 0.80 0.15 80;
+        --funny-accent: 0.70 0.12 240;
+        --funny-muted: 0.65 0.10 280;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        background: linear-gradient(135deg, 
+            oklch(var(--background)) 0%, 
+            oklch(0.96 0.03 330) 25%,
+            oklch(0.97 0.03 80) 50%, 
+            oklch(0.96 0.03 240) 75%,
+            oklch(var(--background)) 100%);
+        background-attachment: fixed;
+    }
+}
+
+@layer utilities {
+    /* Floating animation for hearts and smiles */
+    @keyframes float-up {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.7;
+        }
+        90% {
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+    
+    .animate-float-up {
+        animation: float-up linear infinite;
+    }
+    
+    /* Sparkle animation */
+    @keyframes sparkle {
+        0%, 100% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    .animate-sparkle {
+        animation: sparkle 2s ease-in-out infinite;
+    }
+    
+    /* Slow spin for floating elements */
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .animate-spin-slow {
+        animation: spin-slow 8s linear infinite;
+    }
+    
+    /* Funny shadow with cheerful colors */
+    .shadow-funny {
+        box-shadow: 0 10px 40px -10px oklch(0.70 0.20 330 / 0.5),
+                    0 0 20px oklch(0.75 0.15 240 / 0.3);
+    }
+}

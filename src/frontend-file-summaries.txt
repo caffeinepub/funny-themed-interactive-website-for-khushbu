@@ -1,0 +1,10 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up the layout with a fun bubble background pattern, main content area, and footer.",
+  "frontend/src/pages/ValentineProposal.tsx": "Core proposal page with interactive Yes/No buttons, Hindi/English mixed text question for Khushbu, lighthearted message reveal with hearts and smiles, and playful button evasion mechanics.",
+  "frontend/src/components/FloatingAnimation.tsx": "Component that generates and animates floating hearts and smiling faces across the screen with gentle rotation and upward movement.",
+  "frontend/src/components/SparkleEffect.tsx": "Component that creates sparkle animations scattered across the page for romantic ambiance.",
+  "frontend/src/components/Footer.tsx": "Footer component with attribution and love icon linking to caffeine.ai.",
+  "frontend/src/index.css": "Global styles with cheerful OKLCH color system featuring pinks, yellows, and lollipop blues, gradient backgrounds, and custom animations for floating elements and sparkles.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with funny theme color tokens (cheerful pinks, yellows, lollipop blues) replacing the romantic theme.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this frontend-only application."
+}
